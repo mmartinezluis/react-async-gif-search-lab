@@ -17,10 +17,15 @@ export default class GifSearch extends React.Component {
 
 
     render(){
+        // console.log(this.props)
+        // console.log("hello")
         return (
-            <form onSubmit= {this.props.handleSubmit()}>
-                <input type="text" value={this.state.userInput} onChange = {event => this.handleChange(event)} />
-            </form>
+            <div>
+                <form onSubmit= { event => this.props.handleSubmit(event, this.state.userInput)}>
+                    <input type="text" value={this.state.userInput} onChange = {event => this.handleChange(event)} />
+                    <input type='submit' />
+                </form>
+            </div>
         )
     }
 }
