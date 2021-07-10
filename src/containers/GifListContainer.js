@@ -8,7 +8,7 @@ export default class GifListContainer extends React.Component{
     }
 
     componentDidMount(query = 'dolphin'){
-        fetch(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=76ieZZ1srp8NC8B06losXXREGIQK6iaF&rating=g`)
+        fetch(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=IN_.ENV_FILE&rating=g`)
         .then(resp => resp.json())
         .then(data => {
             this.setState({
